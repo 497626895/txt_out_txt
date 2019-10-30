@@ -123,9 +123,9 @@ def make_xml_from_output_txt(path, save_path):
 
         size = doc.createElement('size')
         width = doc.createElement('width')
-        width.appendChild(doc.createTextNode(str(500)))
+        width.appendChild(doc.createTextNode(str(544)))
         height = doc.createElement('height')
-        height.appendChild(doc.createTextNode(str(350)))
+        height.appendChild(doc.createTextNode(str(416)))
         depth = doc.createElement('depth')
         depth.appendChild(doc.createTextNode(str(3)))
         size.appendChild(width)
@@ -140,9 +140,7 @@ def make_xml_from_output_txt(path, save_path):
             width = int(picName[j].split('i')[3])
             height = int(picName[j].split('i')[4])
             c = int(picName[j].split('i')[0])
-            if c == 1:
-                c = 2
-
+         
             object_d = doc.createElement('object')
             name = doc.createElement('name')
             name.appendChild(doc.createTextNode(str(c)))
@@ -176,6 +174,6 @@ def make_xml_from_output_txt(path, save_path):
         doc.writexml(f, indent='\t', newl='\n', addindent='\t', encoding='utf-8')
         f.close()
 
-path = 'C:\\Users\\flash\\source\\repos\\PythonApplication8\\PythonApplication8\\100030101.txt'
+path = 'C:\\Users\\flash\\Desktop\\100030104.txt'
 save_path = 'C:\\Users\\flash\\Desktop\\std\\'
 make_xml_from_output_txt(path,save_path)
